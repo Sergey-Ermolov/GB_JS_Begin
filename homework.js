@@ -8,8 +8,8 @@ alert(Tf);
 
 // Задание №2
 
-let name = 'Василий';
-let admin = name;
+let userName = 'Василий';
+let admin = userName;
 console.log(admin);
 
 // Задание №3
