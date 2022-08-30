@@ -175,3 +175,80 @@ alert(calculation);
 
 calculation = mathOperation(10, 2, 'split');
 alert(calculation);
+
+
+// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+
+// УРОК 3
+
+// Задание №1
+
+function primeNumbers() {
+    let setNumbers = 100; 
+    let i = 2;
+    let primeArr = [ ];
+    while (i <= setNumbers) { 
+        if (i==2 || i==3 || i==5 || i==7) { 
+            primeArr.push(" " + i);
+            i++
+            continue;
+    } 
+    else if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
+    i++;
+    continue;
+    }
+    primeArr.push(" " + i++);
+    }
+    console.log(primeArr);
+    };
+
+    primeNumbers();
+
+// Задание № 2
+
+function countBasketPrice() {
+    let basket = [
+    {
+    name: 'Product-1',
+    price: 100,
+    count: 1
+    },
+    {
+    name: 'Product-2',
+    price: 200,
+    count: 1
+    },
+    {
+    name: 'Product-3',
+    price: 300,
+    count: 1
+    },
+    ];
+    
+    let sum = 0;
+    let quantity = 0;
+    let productName = 'В корзине находится товар следующих наименований: ';
+    for (let item of basket) {
+    sum += (item.price * item.count);
+    quantity += item.count;
+    productName += '(' + item.name + ') ';
+    }
+    var q = basket.length;
+    document.getElementById('basket').innerHTML = productName + '.' +
+    'Общее количество выбранных позиций товаров составляет, шт.: ' + quantity + '.' +
+    'Стоимость всех выбранных товаров в корзине составляет, руб.: ' + sum + '.';
+    };
+
+    countBasketPrice();
+
+// Задание № 3
+
+for (let i = 0; i <= 9; console.log(i++)) { }
+
+
+// Задание № 4
+
+for (let i = 'x'; i.length <= 20; i += 'x') {
+    console.log(i);
+}
